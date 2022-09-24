@@ -459,6 +459,39 @@ columns, i.e, 8 variables.</h3>
     vec_factor = factor(c(&quot;she&quot;,&quot;he&quot;,&quot;he&quot;,&quot;she&quot;,&quot;they&quot;,&quot;he&quot;,&quot;they&quot;,&quot;she&quot;,&quot;he&quot;,&quot;they&quot;))
   )</code></pre>
 </div>
+<div id="part-2-means-of-variables" class="section level2">
+<h2>Part 2: Means of variables</h2>
+<pre class="r"><code>mean_var_numeric = mean(pull(HW1P2_df, var_numeric))
+round(mean_var_numeric, digits = 2)</code></pre>
+<pre><code>## [1] -0.34</code></pre>
+<div id="mean-of-var_numeric-works-because-it-is-numerical." class="section level3">
+<h3>mean of var_numeric works because it is numerical.</h3>
+<pre class="r"><code>mean_vec_log = mean(pull(HW1P2_df, vec_log))
+round(mean_vec_log, digits = 2)</code></pre>
+<pre><code>## [1] 0.4</code></pre>
+</div>
+<div id="mean-of-vec_log-works-because-it-is-a-logical-variable." class="section level3">
+<h3>mean of vec_log works because it is a logical variable.</h3>
+<pre class="r"><code>mean_vec_char = mean(pull(HW1P2_df, vec_char))</code></pre>
+<pre><code>## Warning in mean.default(pull(HW1P2_df, vec_char)): argument is not numeric or
+## logical: returning NA</code></pre>
+<pre class="r"><code>round(mean_vec_char, digits = 2)</code></pre>
+<pre><code>## [1] NA</code></pre>
+</div>
+<div id="mean-of-vec_char-doesnt-work-because-it-is-not-numeric-or-logical.-value-is-na." class="section level3">
+<h3>Mean of vec_char doesn’t work because it is not numeric or logical.
+Value is NA.</h3>
+<pre class="r"><code>mean_vec_factor = mean(pull(HW1P2_df, vec_factor))</code></pre>
+<pre><code>## Warning in mean.default(pull(HW1P2_df, vec_factor)): argument is not numeric or
+## logical: returning NA</code></pre>
+<pre class="r"><code>round(mean_vec_factor, digits = 2)</code></pre>
+<pre><code>## [1] NA</code></pre>
+</div>
+<div id="mean-of-vec_factor-doesnt-work-because-it-is-not-numeric-or-logical.-value-is-na." class="section level3">
+<h3>Mean of vec_factor doesn’t work because it is not numeric or
+logical. Value is NA.</h3>
+</div>
+</div>
 </div>
 
 

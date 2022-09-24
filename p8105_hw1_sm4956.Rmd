@@ -65,6 +65,30 @@ HW1P2_df =
   )
 ```
 
+## Part 2: Means of variables
+
+```{r mean of numeric variable}
+mean_var_numeric = mean(pull(HW1P2_df, var_numeric))
+round(mean_var_numeric, digits = 2)
+```
+### mean of var_numeric works because it is numerical.
 
 
+```{r mean of logical vector}
+mean_vec_log = mean(pull(HW1P2_df, vec_log))
+round(mean_vec_log, digits = 2)
+```
+### mean of vec_log works because it is a logical variable.
+
+```{r mean of character vector}
+mean_vec_char = mean(pull(HW1P2_df, vec_char))
+round(mean_vec_char, digits = 2)
+```
+### Mean of vec_char doesn't work because it is not numeric or logical. Value is NA.
+
+```{r mean of factor vector}
+mean_vec_factor = mean(pull(HW1P2_df, vec_factor))
+round(mean_vec_factor, digits = 2)
+```
+### Mean of vec_factor doesn't work because it is not numeric or logical. Value is NA.
 
