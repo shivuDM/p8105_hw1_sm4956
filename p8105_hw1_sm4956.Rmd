@@ -52,3 +52,19 @@ ggsave("scatter_penguins_df.pdf", height = 6, width = 6)
 
 ```
 
+# Problem 2
+## Part 1: creating data frame HW1P2
+
+```{r problem 2 dataframe creation}
+HW1P2_df = 
+  tibble (
+    var_numeric = rnorm (n = 10),
+    vec_log = var_numeric > 0,
+    vec_char = c("Elena","Damon","Stefan","Caroline","Katherine","Tyler","Matt","Bonnie","Klaus","Elijah"),
+    vec_factor = factor(c("she","he","he","she","they","he","they","she","he","they"))
+  )
+```
+
+
+
+

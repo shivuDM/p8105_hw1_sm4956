@@ -447,6 +447,19 @@ columns, i.e, 8 variables.</h3>
 <pre><code>## Warning: Removed 2 rows containing missing values (geom_point).</code></pre>
 </div>
 </div>
+<div id="problem-2" class="section level1">
+<h1>Problem 2</h1>
+<div id="part-1-creating-data-frame-hw1p2" class="section level2">
+<h2>Part 1: creating data frame HW1P2</h2>
+<pre class="r"><code>HW1P2_df = 
+  tibble (
+    var_numeric = rnorm (n = 10),
+    vec_log = var_numeric &gt; 0,
+    vec_char = c(&quot;Elena&quot;,&quot;Damon&quot;,&quot;Stefan&quot;,&quot;Caroline&quot;,&quot;Katherine&quot;,&quot;Tyler&quot;,&quot;Matt&quot;,&quot;Bonnie&quot;,&quot;Klaus&quot;,&quot;Elijah&quot;),
+    vec_factor = factor(c(&quot;she&quot;,&quot;he&quot;,&quot;he&quot;,&quot;she&quot;,&quot;they&quot;,&quot;he&quot;,&quot;they&quot;,&quot;she&quot;,&quot;he&quot;,&quot;they&quot;))
+  )</code></pre>
+</div>
+</div>
 
 
 
