@@ -13,8 +13,35 @@ library(tidyverse)
 ```
 
 # Problem 1
+## Part 1
 
-```{r}
+```{r loading dataset penguins}
 data("penguins", package = "palmerpenguins")
 ```
+
+```{r description of penguins dataset}
+penguins_df = data.frame(penguins)
+nrow(penguins_df)
+ncol(penguins_df)
+mean(penguins_df$flipper_length_mm, na.rm = TRUE)
+```
+
+## 1a. Data in dataset 'Penguins':  
+### Names of important variables: Species, Island, Bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g, sex, year. 
+* There are 3 'species' of penguins: Adelie, Chinstrap and Gentoo. 
+* There are 3 'islands': Torgersen, Bisco and Dream. These are both character variables. 
+* 'bill_length_mm' provides the length of bills of penguins in mm. 
+* 'bill_depth_mm' provides the depth of bills of penguins in mm. 
+* 'flipper_length_mm' provides length of flippers of penguins in mm. 
+* 'body_mass_g' provides the body mass information of penguins in grams. These are all numeric variables. 
+* 'sex' and 'year' provide information about the sex (dichotomous variable: Male and Female) and year of birth of penguins.
+
+## 1b. Size of the dataset:
+### the dataset 'Penguins' has 344 rows, i.e. 344 observations, and 8 columns, i.e, 8 variables.
+
+## 1c. mean flipper length:
+### the mean flipper length is 200.9152 mm
+
+# Problem 1
+## Part 2
 

@@ -389,7 +389,58 @@ pre code {
 </div>
 <div id="problem-1" class="section level1">
 <h1>Problem 1</h1>
+<div id="part-1" class="section level2">
+<h2>Part 1</h2>
 <pre class="r"><code>data(&quot;penguins&quot;, package = &quot;palmerpenguins&quot;)</code></pre>
+<pre class="r"><code>penguins_df = data.frame(penguins)
+nrow(penguins_df)</code></pre>
+<pre><code>## [1] 344</code></pre>
+<pre class="r"><code>ncol(penguins_df)</code></pre>
+<pre><code>## [1] 8</code></pre>
+<pre class="r"><code>mean(penguins_df$flipper_length_mm, na.rm = TRUE)</code></pre>
+<pre><code>## [1] 200.9152</code></pre>
+</div>
+<div id="a.-data-in-dataset-penguins" class="section level2">
+<h2>1a. Data in dataset ‘Penguins’:</h2>
+<div id="names-of-important-variables-species-island-bill_length_mm-bill_depth_mm-flipper_length_mm-body_mass_g-sex-year." class="section level3">
+<h3>Names of important variables: Species, Island, Bill_length_mm,
+bill_depth_mm, flipper_length_mm, body_mass_g, sex, year.</h3>
+<ul>
+<li>There are 3 ‘species’ of penguins: Adelie, Chinstrap and
+Gentoo.</li>
+<li>There are 3 ‘islands’: Torgersen, Bisco and Dream. These are both
+character variables.</li>
+<li>‘bill_length_mm’ provides the length of bills of penguins in
+mm.</li>
+<li>‘bill_depth_mm’ provides the depth of bills of penguins in mm.</li>
+<li>‘flipper_length_mm’ provides length of flippers of penguins in
+mm.</li>
+<li>‘body_mass_g’ provides the body mass information of penguins in
+grams. These are all numeric variables.</li>
+<li>‘sex’ and ‘year’ provide information about the sex (dichotomous
+variable: Male and Female) and year of birth of penguins.</li>
+</ul>
+</div>
+</div>
+<div id="b.-size-of-the-dataset" class="section level2">
+<h2>1b. Size of the dataset:</h2>
+<div id="the-dataset-penguins-has-344-rows-i.e.-344-observations-and-8-columns-i.e-8-variables." class="section level3">
+<h3>the dataset ‘Penguins’ has 344 rows, i.e. 344 observations, and 8
+columns, i.e, 8 variables.</h3>
+</div>
+</div>
+<div id="c.-mean-flipper-length" class="section level2">
+<h2>1c. mean flipper length:</h2>
+<div id="the-mean-flipper-length-is-200.9152-mm" class="section level3">
+<h3>the mean flipper length is 200.9152 mm</h3>
+</div>
+</div>
+</div>
+<div id="problem-1-1" class="section level1">
+<h1>Problem 1</h1>
+<div id="part-2" class="section level2">
+<h2>Part 2</h2>
+</div>
 </div>
 
 
