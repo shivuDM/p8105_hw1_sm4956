@@ -45,3 +45,10 @@ mean(penguins_df$flipper_length_mm, na.rm = TRUE)
 # Problem 1
 ## Part 2
 
+```{r scatterplot for Penguins}
+ggplot(penguins_df,aes(x = bill_length_mm, y = flipper_length_mm, color = species)) + geom_point()
+
+ggsave("scatter_penguins_df.pdf", height = 6, width = 6)
+
+```
+
