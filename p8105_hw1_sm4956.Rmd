@@ -71,14 +71,15 @@ HW1P2_df =
 mean_var_numeric = mean(pull(HW1P2_df, var_numeric))
 round(mean_var_numeric, digits = 2)
 ```
-### mean of var_numeric works because it is numerical.
+### Mean of var_numeric works because it is numerical.
 
 
 ```{r mean of logical vector}
 mean_vec_log = mean(pull(HW1P2_df, vec_log))
 round(mean_vec_log, digits = 2)
 ```
-### mean of vec_log works because it is a logical variable.
+### Mean of vec_log works because it is a logical variable.
+
 
 ```{r mean of character vector}
 mean_vec_char = mean(pull(HW1P2_df, vec_char))
@@ -86,9 +87,25 @@ round(mean_vec_char, digits = 2)
 ```
 ### Mean of vec_char doesn't work because it is not numeric or logical. Value is NA.
 
+
 ```{r mean of factor vector}
 mean_vec_factor = mean(pull(HW1P2_df, vec_factor))
 round(mean_vec_factor, digits = 2)
 ```
 ### Mean of vec_factor doesn't work because it is not numeric or logical. Value is NA.
+
+
+## Part 3: conversion of variables
+
+```{r converting variables, eval = FALSE}
+as.numeric(HW1P2_df$vec_log)
+as.numeric(HW1P2_df$vec_char)
+as.numeric(HW1P2_df$vec_factor)
+```
+## as.numeric converted the vec.log and vec.factor to numeric variables. 
+* vec_log got changed to 2 values of 0 and 1 based on logic (value > 0 = True and value < 0 = False). 
+* vec_factor got converted to 3 levels of values of 1,2 and 3 for pronouns he, she and they, respectively. 
+* vec_char was not changed to numerical value.
+
+### This explains what happened while calculating the mean before and now. Mean can only be calculated if the variable is numerical or logical. As the factor vector got converted to numeric/ logical values, mean will be possible to calculate. Character variable could still not convert to numerical variable, so mean won't be calculated.
 

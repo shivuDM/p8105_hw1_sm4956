@@ -463,15 +463,15 @@ columns, i.e, 8 variables.</h3>
 <h2>Part 2: Means of variables</h2>
 <pre class="r"><code>mean_var_numeric = mean(pull(HW1P2_df, var_numeric))
 round(mean_var_numeric, digits = 2)</code></pre>
-<pre><code>## [1] -0.34</code></pre>
+<pre><code>## [1] 0.29</code></pre>
 <div id="mean-of-var_numeric-works-because-it-is-numerical." class="section level3">
-<h3>mean of var_numeric works because it is numerical.</h3>
+<h3>Mean of var_numeric works because it is numerical.</h3>
 <pre class="r"><code>mean_vec_log = mean(pull(HW1P2_df, vec_log))
 round(mean_vec_log, digits = 2)</code></pre>
-<pre><code>## [1] 0.4</code></pre>
+<pre><code>## [1] 0.6</code></pre>
 </div>
 <div id="mean-of-vec_log-works-because-it-is-a-logical-variable." class="section level3">
-<h3>mean of vec_log works because it is a logical variable.</h3>
+<h3>Mean of vec_log works because it is a logical variable.</h3>
 <pre class="r"><code>mean_vec_char = mean(pull(HW1P2_df, vec_char))</code></pre>
 <pre><code>## Warning in mean.default(pull(HW1P2_df, vec_char)): argument is not numeric or
 ## logical: returning NA</code></pre>
@@ -490,6 +490,30 @@ Value is NA.</h3>
 <div id="mean-of-vec_factor-doesnt-work-because-it-is-not-numeric-or-logical.-value-is-na." class="section level3">
 <h3>Mean of vec_factor doesn’t work because it is not numeric or
 logical. Value is NA.</h3>
+</div>
+</div>
+<div id="part-3-conversion-of-variables" class="section level2">
+<h2>Part 3: conversion of variables</h2>
+<pre class="r"><code>as.numeric(HW1P2_df$vec_log)
+as.numeric(HW1P2_df$vec_char)
+as.numeric(HW1P2_df$vec_factor)</code></pre>
+</div>
+<div id="as.numeric-converted-the-vec.log-and-vec.factor-to-numeric-variables." class="section level2">
+<h2>as.numeric converted the vec.log and vec.factor to numeric
+variables.</h2>
+<ul>
+<li>vec_log got changed to 2 values of 0 and 1 based on logic (value
+&gt; 0 = True and value &lt; 0 = False).</li>
+<li>vec_factor got converted to 3 levels of values of 1,2 and 3 for
+pronouns he, she and they, respectively.</li>
+<li>vec_char was not changed to numerical value.</li>
+</ul>
+<div id="this-explains-what-happened-while-calculating-the-mean-before-and-now.-mean-can-only-be-calculated-if-the-variable-is-numerical-or-logical.-as-the-factor-vector-got-converted-to-numeric-logical-values-mean-will-be-possible-to-calculate.-character-variable-could-still-not-convert-to-numerical-variable-so-mean-wont-be-calculated." class="section level3">
+<h3>This explains what happened while calculating the mean before and
+now. Mean can only be calculated if the variable is numerical or
+logical. As the factor vector got converted to numeric/ logical values,
+mean will be possible to calculate. Character variable could still not
+convert to numerical variable, so mean won’t be calculated.</h3>
 </div>
 </div>
 </div>
