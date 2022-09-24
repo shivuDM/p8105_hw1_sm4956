@@ -12,3 +12,9 @@ output: github_document
 library(tidyverse)
 ```
 
+# Problem 1
+
+```{r}
+data("penguins", package = "palmerpenguins")
+```
+
